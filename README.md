@@ -1,5 +1,5 @@
 # OpenTutorials_WEB2-JavaScript
-생활코딩 WEB2 - JavaScript [[link]](https://opentutorials.org/course/3085) Study
+생활코딩 WEB2 - JavaScript Study [[link]](https://opentutorials.org/course/3085)
 
 ## 2. 수업의 목적 (Purpose)
   - JavaScript가 할 수 있는 기능: '사용자와 상호작용'
