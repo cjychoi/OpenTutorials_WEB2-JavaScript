@@ -58,5 +58,37 @@
   1. CSS의 본질적이고 중요한 문법
   2. JavaScript를 이용해서 제어하고자 하는 태그를 선택하는 방법
       
- 
+
+## 9. CSS 기초: style 속성
+  - `<~ style=" (CSS) ">` 
+      - `background-color: (color)` : 해당 글씨의 배경 색 변경
+      - `color: (color)` : 해달 글씨의 색 변경
+  - style 이라는 속성 안에 CSS 문법을 넣으면 디자인이 가능.
+  
+## 10. CSS 기초: style 태그  
+  - `<div> </div>`: CSS, JS를 통해 정보를 제어하고 싶을 때 감싸주는 무기능의 태그
+      - 화면 전체를 쓰기 때문에 줄바꿈 됨
+  - `<span> </span>`: `<div>`와 같은 기능이지만 줄바꿈 안됨
+      - `<span style="font-weight:bold;">`: 진한 글씨를 표현하는 방법
       
+      
+  - 바꾸고 싶은 문자열이 여러 개일 경우, 한번에 수정하는 방법
+      - `<style> (CSS) </style>`: CSS로 표현된 코드를 나타냄
+          - class를 나타내는 법
+              - `.(class_name) { (CSS) }` : 모든 (class_name)의 속성을 (CSS)로 바꿈
+  
+## 11. CSS 기초: 선택자
+  - 웹페이지의 여러 요소들을 효율적으로 수정하는 법
+      - `<style> (CSS) </style>`
+          - id 값을 부여하는 법
+              - `#(id) { (CSS) }` : (id) 대상의 속성을 (CSS)로 바꿈
+          - id vs. class
+              - id: 고유 식별자, 오직 하나의 대상만을 가리킴
+              - class: 그룹핑, id보다 포괄적인 개념
+              - 같은 class 이더라도 id 선택자로 예외처리 가능. (id가 우선순위 더 높음)
+          - `span { (CSS) }`
+              - 모든 span 태그의 속성이 변함
+      - 우선순위
+          - id > class > span
+  - 선택자가 중요한 이유
+      - 원하는 속성을 원하는 대상에 정확하게 타겟팅해서 적용해야 하기 때문.
