@@ -92,3 +92,90 @@
           - id > class > span
   - 선택자가 중요한 이유
       - 원하는 속성을 원하는 대상에 정확하게 타겟팅해서 적용해야 하기 때문.
+      
+ ## 12. 제어할 태그 선택하기
+  - EX08 동작 원리
+      - 'night' 버튼을 눌렀을 때 `<body>` 태그에 `<style>` 속성이 생기면서 CSS의 내용에 따라 디자인이 변함.
+  - EX12
+      - 'onclick' 시 실행될 JavaScript 명령 (동적 상호작용)
+          - `<body>` 태그를 선택하도록 해야 함
+          ```
+          document.querySelector('body')
+          ```
+          - `<body>` 태그에 `<style>` 속성을 넣어야 함
+          ```
+                      ~~~.style.~~~
+          (querySelector).style.(backgroundColor)
+          ```          
+          
+## 13. 프로그램, 프로그래밍, 프로그래머  
+  - Program
+      - 어떤 일을 수행하는 '순서'
+      - 의도에 따라 순서대로 여러 기능을 작동 시키는 과정
+      - 반복되는 과정을 간소화 하기 위한 방법
+          - 시간의 순서에 따라 실행되어야 할 기능을 문법에 맞게 글을 적는 방식
+          - '프로그래밍 언어'
+          
+  - HTML과 JavaScript의 차이
+      - HTML: 컴퓨터 언어
+          - 시간의 순서에 따라 실행되는 기능 X
+      - JavaScript: 컴퓨터 언어, 컴퓨터 프로그래밍 언어      
+          - 사용자와 상호작용 하기 위해 만들어짐
+          - 시간의 순서에 따라 웹브라우저의 여러 기능이 실행되어야 함
+  
+## 15. 비교연산자(Comparison Operator)와 Boolean 변수
+  ```
+  <script>
+    document.write(~~~)   // 웹페이지에 (~~~) 출력
+  </script>
+  ```
+  - 비교 이항 연산자 `===`
+      - 양쪽 값이 같으면 true 
+      - 양쪽 값이 다르면 false 출력
+  - boolean 데이터 타입
+      - true 또는 false의 값을 가지는 변수
+  - `&lt;` = `<`의 HTMl 표현
+
+## 16. 조건문 (Conditional Statements)
+  - `if(true)` 일 경우
+      - 바로 다음 {} 수행
+      - else{} 무시
+  - `if(false)`일 경우
+      - 바로 다음 {} 무시
+      - else{} 수행
+      
+## 17. 조건문의 활용      
+  - EX17
+      - night와 day 버튼을 하나로 융합하기
+      - 초기 상태: night
+          1. 'NIGHT' 버튼을 누를 경우
+              - if(true){}로 진입
+              - 배경색: 검정, 글씨색: 흰색 으로 변경
+              - value 값을 'DAY'로 변경
+          2. 'DAY' 버튼을 누를 경우
+              - else{}로 진입
+              - 배경색: 흰색, 글씨색: 검정 으로 변경
+              - value 값을 'NIGHT'로 변경
+
+## 18. 리팩토링, 중복의 제거
+  - 리팩토링(Refactoring)
+      - 비효율적이고 반복되는 코드를 제거하는 과정
+  
+  - `this`
+      - 현재 코드가 가리키고 있는 태그를 가리키는 키워드
+      - EX 18
+      ```
+      onclick="
+        if(this.value === 'NIGHT')
+           this.value = "DAY';
+      "
+      ```
+  - 중복된 코드를 제거하기 (변수 활용)
+     ```
+     var target = document.querySelector('body');
+     target.style.backgroundColor = 'black';
+     target.style.color = 'white';
+     ...
+     ```
+     
+  
