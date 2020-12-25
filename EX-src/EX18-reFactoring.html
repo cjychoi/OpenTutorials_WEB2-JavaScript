@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <title>WEB1 - JavaScript</title>
+    <meta charset="utf-8"
+  </head>
+
+  <body>
+    <h1><a href="index.html">WEB</a></h1>
+
+    <input id="night_day" type="button" value="NIGHT" onclick="
+
+      // 같은 코드의 반복을 줄이기 위해서 'target'이라는 변수를 사용
+      var target = document.querySelector('body');
+
+      if(document.querySelector('#night_day').value === 'NIGHT'){
+        target.style.backgroundColor='black';
+      target.style.color='white';
+        document.querySelector('#night_day').value = 'DAY';
+      }
+      else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        document.querySelector('#night_day').value = 'NIGHT';
+      }
+
+    ">
+
+    <ol>
+      <li><a href="1.html">HTML</a> </li>
+      <li><a href="2.html">CSS</a> </li>
+      <li><a href="3.html">JavaScript</a> </li>
+    </ol>
+
+    <h2>JavaScript</h2>
+    <p>JavaScript (/ˈdʒɑːvəˌskrɪpt/),[6] often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.[7] JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+    </p>
+
+      <!--
+        <input id="night_day" type="button" value="NIGHT" onclick="
+          if(document.querySelector('#night_day').value === 'NIGHT'){
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            document.querySelector('#night_day').value = 'DAY';
+          }
+          else {
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            document.querySelector('#night_day').value = 'NIGHT';
+          }
+
+        ">
+        이렇게 하면 위에 있는 첫번째 버튼의 이름만 바뀌게 된다.
+        id="night_day"인 부분이 위에 먼저 나오기 때문.
+        따라서 '현재 이 버튼'을 가리키는 키워드인 'this'를 활용해야 함.
+      -->
+
+        <input id="night_day" type="button" value="NIGHT" onclick="
+          if(this.value === 'NIGHT'){
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            this.value = 'DAY';
+          }
+          else {
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            this.value = 'NIGHT';
+          }
+
+        ">
+  </body>
+</html>
